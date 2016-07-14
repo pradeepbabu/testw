@@ -1,3 +1,8 @@
+# install required packages
+packages <- c("raster", "sp", "maps", "mapdata", "SDMTools", "markovchain", "plyr", "RAtmosphere")
+if (length(setdiff(packages, rownames(installed.packages()))) > 0) {
+  install.packages(setdiff(packages, rownames(installed.packages())))  
+}
 
 # get latitude, longitude, elevation, & timezones of airports
 # https://commondatastorage.googleapis.com/ckannet-storage/2012-07-09T214020/global_airports.csv
