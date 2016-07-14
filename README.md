@@ -19,10 +19,26 @@ Random 10 airport selected
 
 ``` r
 #alter to appropriate filepath
-iata <- read.csv("C:/Users/Pradeep Pillai/Desktop/weatherv1/testw/iata.csv") 
+iata <- read.csv("iata.csv") 
 set.seed(123)
 iata10 <- iata[sample(nrow(iata), 10), ]
 iata10 <- iata[sample(nrow(iata), 10), ]
+print(iata10[,c("iata","name")],row.names=F)
+```
+
+    ##  iata                          name
+    ##   WYA               Whyalla Airport
+    ##   KNX                     Kununurra
+    ##   NRA            Narrandera Airport
+    ##   MEB            Melbourne Essendon
+    ##   BLT            Blackwater Airport
+    ##   TMW                      Tamworth
+    ##   OOM Cooma Snowy Mountains Airport
+    ##   AUU               Aurukun Airport
+    ##   GET             Geraldton Airport
+    ##   XTG          Thargomindah Airport
+
+``` r
 # check distribution of selected 10 airports
 library(maps)
 library(mapdata)

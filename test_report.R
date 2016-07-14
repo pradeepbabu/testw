@@ -1,11 +1,8 @@
 
 # get latitude, longitude, elevation, & timezones of airports
-setwd("C:/Users/Pradeep Pillai/Desktop/weatherv1/testw/")
-url <-
-  "https://commondatastorage.googleapis.com/ckannet-storage/2012-07-09T214020/global_airports.csv"
-download.file(url, file.path("~", "global_aiports.csv"))
-
-iata <- read.csv("~","global_aiports.csv")
+# https://commondatastorage.googleapis.com/ckannet-storage/2012-07-09T214020/global_airports.csv
+# change filepath appropriately
+iata <- read.csv("C:/Users/Pradeep Pillai/Desktop/weatherv1/testw/data/global_airports.csv")
 names(iata)[names(iata) == 'iata_faa'] <- 'iata'
 # selecting mostly mainland australia
 iata <- subset(
