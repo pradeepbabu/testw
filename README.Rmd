@@ -44,7 +44,8 @@ points(iata10$longitude, iata10$latitude,pch=16)
 
 
 **Stochastic simulation of daily climate**  
-Weather stage (sunny/cloudy/rainy) using a first order 3 state Markov chain:  
+
+Weather state (sunny/cloudy/rainy) using a first order 3 state Markov chain:  
 - Transition probabilites assumed to be homogenous by region within season.    
 - Spatial correlation patterns of rainfall events may change monthly and
 seasonally (e.g., from a convective rainfall season to a frontal rainfall
