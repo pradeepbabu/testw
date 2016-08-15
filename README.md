@@ -52,20 +52,22 @@ points(iata10$longitude, iata10$latitude,pch=16)
 ![](README_files/figure-markdown_github/select10-1.png)
 
 **Stochastic simulation of daily climate**
-First order 3 state Markov chain - Transition probabilites assumed to homogenous by region within season.
-- Because spatial correlation patterns of rainfall events may change monthly and seasonally (e.g., from a convective rainfall season to a frontal rainfall season), therefore, multiple probability matrices have been used.
+Weather stage (sunny/cloudy/rainy) using a first order 3 state Markov chain:
+- Transition probabilites assumed to be homogenous by region within season.
+- Spatial correlation patterns of rainfall events may change monthly and seasonally (e.g., from a convective rainfall season to a frontal rainfall season), therefore, multiple probability matrices have been used.
 
-Australia has six climatic zones and this translates as two main seasonal patterns. There is a Summer / Autumn / Winter / Spring pattern in the Temperate zone, also affecting the Desert and the Grassland climatic zones and, a Wet / Dry pattern in the tropical north which includes the Equatorial, Tropical and sub-tropical zones. Reference: <http://www.australia.gov.au/about-australia/australian-story/austn-weather-and-the-seasons>
+Australia has six climatic zones and this translates as two main seasonal patterns. There is a Summer / Autumn / Winter / Spring pattern in the Temperate zone, also affecting the Desert and the Grassland climatic zones, and a Wet / Dry pattern in the tropical north which includes the Equatorial, Tropical and sub-tropical zones. Reference: <http://www.australia.gov.au/about-australia/australian-story/austn-weather-and-the-seasons>
 
 More detailed climate zone classifications at:
 Peel, M.C., Finlayson, B. L., and McMahon, T. A.: Updated world map of the Köppen-Geiger climate classification, Hydrol. Earth Syst. Sci., 11, 1633-1644, <doi:10.5194/hess-11-1633-2007>, 2007.
 Kottek, M., J. Grieser, C. Beck, B. Rudolf, and F. Rubel, 2006: World Map of the Köppen-Geiger climate classification updated. Meteorol. Z., 15, 259-263.DOI: 10.1127/0941-2948/2006/0130. <http://koeppen-geiger.vu-wien.ac.at/present.htm>
 
-Other parameters Atmospheric pressure:
+*Other parameters*
+Atmospheric pressure:
 As per Hadley's 3 cell model, strong solar heating leads to rising air near equator, air descends at ~30° latitude to form subtropical highs. semipermanent pressure cells over central australia in July and further south in January. Atmospheric pressure falls exponentially with elevation, but this toy model just calculates sea-level pressure as a simple function of latitude and season, and adds randomness to it. A more realistic pattern was not attempted. e.g. as seen in <http://www.bom.gov.au/australia/charts/synoptic_col.shtml> Reference: <http://www.atmo.ttu.edu/schroeder/ATMO_1300/Notes/chapter8.pdf>
 
 Temperature & humidity:
-Temperature may be affected by sunshine available in the season, latitude, altitude, aspect, sea proximity and temperature, ocean currents. The model calculates both as a function of season, latitude, altitude, distance from coast.
+Temperature may be affected by sunshine available in the season, latitude, altitude, aspect, sea proximity and temperature, ocean currents. The model calculates both as functions of season, latitude, altitude, distance from coast.
 
 Further possible extensions:
 
